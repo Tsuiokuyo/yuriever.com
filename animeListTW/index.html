@@ -1,0 +1,1078 @@
+<html lang="zh-TW">
+<head>
+    <title>動畫排名總表：整合多國評分網站的萬部動畫排行榜</title>
+    <link rel="icon" href="image/favicons.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
+	<meta name="description" content="收錄 14000 部以上動畫的完整排名，根據多國動畫評分網站的數據，結合貝氏估計與加權算法，打造最全面、最精準的動畫排行榜。">
+	<meta name="keywords" content="動畫排行, 動漫排行, 動畫排行榜, 動漫排行榜, 熱門動畫, 動畫評分, 動漫推薦">
+    
+    <meta property="og:title" content="動畫排名總表：整合多國評分網站的萬部動畫排行榜" />
+    <meta property="og:description" content="收錄 14000 部以上動畫的完整排名！根據多國動畫評分網站的數據，結合貝氏估計與加權算法，打造最全面、最精準的動畫排行榜。" />
+    <meta property="og:image" content="https://yuriever.com/animeListTW/image/avatar.webp" />
+    <meta property="og:url" content="https://yuriever.com/animeListTW/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_TW" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="動畫排名總表：整合多國評分網站的萬部動畫排行榜" />
+    <meta name="twitter:description" content="收錄 14000 部以上動畫的完整排名，根據多國動畫評分網站的數據，結合貝氏估計與加權算法，打造最全面、最精準的動畫排行榜。" />
+    <meta name="twitter:image" content="https://yuriever.com/animeListTW/image/avatar.webp" />
+
+    <link rel="canonical" href="https://yuriever.com/animeListTW/index.html" />
+
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//raw.githubusercontent.com">
+    <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <link rel="dns-prefetch" href="https://media.kitsu.app">
+    <link rel="preconnect" href="https://media.kitsu.app" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.anisearch.com">
+    <link rel="preconnect" href="https://cdn.anisearch.com" crossorigin>
+    <link rel="dns-prefetch" href="https://walter.trakt.tv">
+    <link rel="preconnect" href="https://walter.trakt.tv" crossorigin>
+    <link rel="dns-prefetch" href="https://wsrv.nl">
+    <link rel="preconnect" href="https://wsrv.nl" crossorigin>
+
+    <link rel="dns-prefetch" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://www.youtube.com" crossorigin>
+    <!-- <link rel="dns-prefetch" href="https://lain.bgm.tv">
+    <link rel="preconnect" href="https://lain.bgm.tv" crossorigin> -->
+    <link rel="dns-prefetch" href="https://cdn.myanimelist.net">
+    <link rel="preconnect" href="https://cdn.myanimelist.net" crossorigin>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" integrity="sha512-/k658G6UsCvbkGRB3vPXpsPHgWeduJwiWGPCGS14IQw3xpr63AEMdA8nMYG2gmYkXitQxDTn6iiK/2fD4T87qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.7.2/vuetify.min.css" integrity="sha512-jCVJeAE589mbKnqSn0nRG6BcJtPRULTekSz/s8EqMvhYXSWlQ6OPu0eYpG8qwhGTtItj14GGVrYq416094MW9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.16/vue.min.js" integrity="sha512-Wx8niGbPNCD87mSuF0sBRytwW2+2ZFr7HwVDF8krCb3egstCc4oQfig+/cfg2OHd82KcUlOYxlSDAqdHqK5TCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.7.2/vuetify.min.js" integrity="sha512-IYt8tD+dURb7hbzLLXHuWV9otZ5fISrB8IvQoKCCRCv4x0A2bum6xXMelApgdT62Za6N1h9Jo+ziEFYht9sRXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/msgpack-lite/0.1.26/msgpack.min.js" integrity="sha512-harMiusNxs02ryf3eqc3iQalz2RSd0z38vzOyuFwvQyW046h2m+/47WiDmPW9soh/p71WQMRSkhSynEww3/bOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/fzstd@0.1.1/umd/index.js"></script>
+
+	<!-- <script src="js/main.js" type="module"></script> -->
+    <script defer src="js/genreMap.js" ></script>
+    <script defer src="js/simpAndTrad.js" ></script>
+	<script defer src="js/main.js"></script>
+    <script defer src="js/snowstorm-min.js"></script>
+
+    <!-- Google tag (gtag.js) 分析 analytics -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-QCHS68JGBX"></script>
+    <script defer>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QCHS68JGBX');
+    </script>
+
+<script>
+    window.onload = async function() {
+        try {
+            const chunkUrl = `https://raw.githubusercontent.com/Tsuiokuyo/animeListTW/refs/heads/master/chunk_1.msgpack.zst`;
+
+            const response = await fetch(chunkUrl);
+            if (!response.ok) {
+                throw new Error(`Failed to load chunk: ${response.statusText}`);
+            }
+
+            const reader = response.body.getReader();
+            const contentLength = +response.headers.get('Content-Length');
+            let loaded = 0;
+            const chunks = [];
+
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                chunks.push(value);
+                loaded += value.length;
+            }
+
+            const zippedContent = new Uint8Array(chunks.reduce((acc, val) => acc.concat(Array.from(val)), []));
+            const decompressed = fzstd.decompress(zippedContent);
+            const decodedData = msgpack.decode(decompressed);
+
+            const structuredData = {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "動畫排名總表：整合多國評分網站的萬部動畫排行榜",
+                "description": "收錄 14000 部動畫的完整排名，根據多國動畫評分網站的數據，結合貝氏估計與加權算法，打造最全面、最精準的動畫排行榜。",
+                "url": "https://yuriever.com/animeListTW/index.html",
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "itemListElement": decodedData.data.slice(0, 10).map(anime => {
+                        const totalVotes = (parseInt(anime.mal?.votes) || 0) +
+                                           (parseInt(anime.aniList?.votes) || 0) +
+                                           (parseInt(anime.bgm?.votes) || 0) +
+                                           (parseInt(anime.kitsu?.votes) || 0) +
+                                           (parseInt(anime.anisearch?.votes) || 0) +
+                                           (parseInt(anime.notifyMoe?.votes) || 0) +
+                                           (parseInt(anime.anidb?.votes) || 0) +
+                                           (parseInt(anime.animePlanetCom?.votes) || 0) +
+                                           (parseInt(anime.gamer?.votes) || 0) +
+                                           (parseInt(anime.livechart?.votes) || 0) +
+                                           (parseInt(anime.anikore?.votes) || 0) +
+                                           (parseInt(anime.ann?.votes) || 0) +
+                                           (parseInt(anime.shikimori?.votes) || 0);
+
+                        let itemType = "TVSeries";
+                        switch (anime.mal?.type.toUpperCase()) {
+                            case "TV":
+                                itemType = "TVSeries";
+                                break;
+                            case "MOVIE":
+                                itemType = "Movie";
+                                break;
+                            case "OVA":
+                            case "ONA":
+                                itemType = "TVSeries";
+                                break;
+                        }
+
+                        const name = anime.gamer?.title || anime.mal?.jp_name || anime.mal?.title;
+                        const alternateNames = [
+                            anime.mal?.title,
+                            anime.mal?.jp_name,
+                            anime.bgm?.cn_name,
+                            anime.mal?.en_name
+                        ].filter(nameItem => nameItem && nameItem !== name);
+
+                        return {
+                            "@type": itemType,
+                            "name": name,
+                            "alternateName": alternateNames,
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": anime.score,
+                                "bestRating": 10,
+                                "ratingCount": totalVotes,
+                                "itemReviewed": {
+                                    "@type": itemType,
+                                    "name": name,
+                                    "url": anime.official || `https://myanimelist.net/anime/${anime.mal.id}`,
+                                    "image": `https://cdn.myanimelist.net/images/anime/${anime.mal.image}`,     
+                                }
+                            },
+                            "url": anime.official || `https://myanimelist.net/anime/${anime.mal.id}`,
+                            "image": `https://cdn.myanimelist.net/images/anime/${anime.mal.image}`,
+                        };
+                    })
+                }
+            };
+
+            // 將結構化數據插入到 <head>
+            const script = document.createElement('script');
+            script.setAttribute('type', 'application/ld+json');
+            script.textContent = JSON.stringify(structuredData);
+            document.head.appendChild(script);
+
+        } catch (error) {
+            console.error("Error loading or processing chunk data:", error);
+        }
+    };
+</script>
+
+</head>
+
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-main>
+                <v-snackbar v-model="snackbarHug" shaped text right v-if="hug != ''" outlined timeout="7500" min-height="200" min-width="300">
+                    <v-img alt="hugGif" max-height="200" max-width="300" contain :src="hug">
+                    </v-img>
+                </v-snackbar>
+                <v-snackbar v-model="saveMsg.state">
+                    {{saveMsg.text}}
+                    <template v-slot:action="{ attrs }">
+              <v-btn
+                color="pink"
+                text
+                v-bind="attrs"
+                @click="saveMsg.state = false"
+              >
+              </v-btn>
+            </template>
+                </v-snackbar>
+                <v-tabs v-model="tab" background-color="#3d4450" dark icons-and-text>
+                    <v-tabs-slider></v-tabs-slider>
+                    <v-tab href="#tab-1">
+                        列表
+                        <v-icon>mdi-format-list-numbered</v-icon>
+                    </v-tab>
+                    <v-tab href="#tab-2">
+                        關於
+                        <v-icon>mdi-information-outline </v-icon>
+                    </v-tab>
+                    <span style="position: absolute;
+                    left:50%;
+                    top:50%;
+                    transform: translate(-50%, -50%);">
+                    <v-avatar color="indigo" size="50" @click="goToBlog">
+                        <img alt="我的頭像" src="image/avatar.webp">
+                    </v-avatar>
+                </span>
+                </v-tabs>
+                <v-alert dismissible color="red lighten-2" border="left" elevation="3" colored-border icon="本站事項" dense class="bkColor">
+					<span>程式碼重構中，如果哪裡壞了一直沒有好，就要等到我發現了，但也可能是瀏覽器快取問題，目前設成兩天。<span>
+                </v-alert>
+				
+                <v-alert dismissible color="#16A2B2" border="left" elevation="3" colored-border icon="GNN新聞" dense class="bkColor">
+                    <a :href="gnn.link" target="_blank" v-if="!!gnn" style="animation:anis 10s linear infinite;">{{gnn.title}} </a>
+                </v-alert>
+                <v-alert dismissible color="green lighten-2" border="left" elevation="3" colored-border icon="萌朧" dense class="bkColor">
+                    <a :href="moelong.link" target="_blank" v-if="!!moelong">{{moelong.title}}</a>
+                </v-alert> 
+                <v-container fluid>
+                    <v-card v-if="tab == 'tab-2'" class="bkColor">
+                        <div class="text-justify">
+                            <section>
+                                <header>
+                                    <h2>關於網站</h2>
+                                </header>
+                        
+                                <p>閒來無事做的純前端畫面，載入速度及搜尋功能可能有點慢，畢竟沒有後端而且沒有用資料庫，本想串Firebase，但50000筆的免費額度有點微妙。</p>
+                                <p>所有資料基於 myanimelist ID 為主。</p>
+                        
+                                <p>目前作業流程是分成三部分：</p>
+                                <ul>
+                                    <li>撈取各網站作品ID</li>
+                                    <li>各網站作品ID映射</li>
+                                    <li>依作品ID取分數、票數等</li>
+                                </ul>
+                        
+                                <p>如果覺得排名有問題請不要找我，因為這只是個野雞榜單。</p>
+                        
+                                <h3>作品篩選依據</h3>
+                                <p>至少要有四個分數來源網站才會放進來此處，里番則為兩個分數來源網站。</p>
+                        
+                                <h2>分數計算</h2>
+                                <p>1. 各網站的作品投票數至少需要 50 票，低於 50 票則不計算分數（視情況未來會上升調整到100）。</p>
+                                <p>2. 至少有 4 個網站的作品計算出分數（里番只需 2 個），才計算最終分數。</p>
+                                <p>這只是大概說明，畢竟後續可能會調整，而且久久可能才改一次邏輯，有些計算錯誤的，可能臨時重改的邏輯的早就忘得差不多了...</p>
+                                <p>簡單的說是，拿各網站所有分數及票數來取得標準化分數、各作品投票資料取得 Bayesian 分數並根據各網站權重、票數後得出最終分數（前提是運算邏輯正確）。</p>
+                        
+                                <h4>標準化邏輯</h4>
+                                <p>首先計算混合在一起的所有分數的總體平均值 (μ) 和總體標準差 (σ)。接著，對於每個網站 i，計算該網站的平均值 (μi) 和標準差 (σi)。最後，來自網站 i 的分數將通過以下公式進行標準化處理：</p>
+                                <pre>
+                                    (單標準 /總標準) * (分數 -單平均) + 總平均
+                                </pre>
+                        
+                                <h4>Bayesian邏輯</h4>
+                                <p>對於特定網站、無投票細節的網站其分數可能會不計算或者存在誤差。公式使用自 <a href="https://imagasaikou.cn/animeratingdb/wiki#bayesian-estimation" target="_blank">https://imagasaikou.cn/animeratingdb/wiki#bayesian-estimation</a></p>
+                        
+                                <h4>網站權重 (暫定)</h4>
+                                <ul>
+                                    <li>mal: 0.7</li>
+                                    <li>aniList: 0.7</li>
+                                    <li>ann: 1.2</li>
+                                    <li>bgm: 0.9</li>
+                                    <li>anikore: 1.1</li>
+                                    <li>gamer: 0.8</li>
+                                    <li>animePlanetCom: 0.9</li>
+                                    <li>anisearch: 1.0</li>
+                                    <li>kitsu: 0.8</li>
+                                    <li>notifyMoe: 1.2</li>
+                                    <li>livechart: 1.0</li>
+                                    <li>shikimori: 1.0</li>
+                                </ul>
+                        
+                                <h4>如果巴哈或bangumi票數 > 總票數的50% </h4>
+                                <p>則網站的權重 * (0.5 / (票數 / 總票數))^3。這條主因是各種極端值，以及某些原因，嚴重影響排名。</p>
+                        
+                                <h4>分數權重</h4>
+                                <ul>
+                                    <li>標準化分數 0.2</li>
+                                    <li>Bayesian分數 0.8</li>
+                                </ul>
+                        
+                                <h4>最終分數</h4>
+                                <p>未來如有發現錯誤邏輯，都會再調整，因此就不解釋了，反正目前程式碼大概長這樣：</p>
+                                <pre style="text-align: left; margin: 0; padding: 0;">
+                                    vote_threshold = 0.5
+                                    if (site == "gamer" or site == "bgm") and total_site_votes > 0 and votes / total_site_votes > vote_threshold:
+                                        adjustment_factor = vote_threshold / (votes / total_site_votes)
+                                        weight *= adjustment_factor ** 3
+                                
+                                    weighted_score_sum += Bayesian_score * votes * weight
+                                    total_votes += votes * weight
+                                    final_normalized_score += normalized_score * weight
+                                    total_weight += weight
+                                
+                                    if total_weight > 0:
+                                        final_normalized_score /= total_weight
+                                    weighted_avg_score = weighted_score_sum / total_votes
+                                    final_score = (weighted_avg_score * w_b) + (final_normalized_score * w_adj)
+                                </pre>
+                                
+                        
+                                <h2>感謝以下有使用或參考的網頁</h2>
+                                <ol>
+                                    <li><a href="https://github.com/manami-project/anime-offline-database/" target="_blank">anime-offline-database</a></li>
+                                    <li><a href="https://github.com/LovEveRv/anime-rating-db" target="_blank">anime-rating-db</a></li>
+                                    <li><a href="https://github.com/soruly/burstlink" target="_blank">burstlink</a></li>
+                                    <li><a href="https://github.com/kawaiioverflow/arm" target="_blank">arm</a></li>
+                                    <li><a href="https://github.com/Fribb/anime-lists" target="_blank">anime-lists</a></li>
+                                    <li><a href="https://github.com/varoOP/shinkrodb" target="_blank">shinkrodb</a></li>
+                                    <li>API部分
+                                        <ul>
+                                            <li><a href="https://github.com/jikan-me/jikan-rest" target="_blank">jikan API</a></li>
+                                            <li><a href="https://github.com/aniList/ApiV2-GraphQL-Docs" target="_blank">aniList API</a></li>
+                                            <li><a href="https://github.com/bangumi/api" target="_blank">bangumi API</a></li>
+                                            <li><a href="https://github.com/bangumi/Archive" target="_blank">bangumi/Archive</a></li>
+                                            <li><a href="https://github.com/trakt/api-help" target="_blank">trakt API</a></li>
+                                            <li><a href="https://wiki.anidb.net/HTTP_API_Definition" target="_blank">anidb API</a></li>
+                                            <li><a href="https://www.animenewsnetwork.com/encyclopedia/api.php" target="_blank">animenewsnetwork API</a></li>
+                                            <li><a href="https://developers.annict.com/docs/rest-api/v1" target="_blank">annict API</a></li>
+                                            <li><a href="https://fanarttv.docs.apiary.io/" target="_blank">fanarttv API</a></li>
+                                            <li><a href="https://kitsu.docs.apiary.io/#" target="_blank">kitsu API</a></li>
+                                            <li><a href="https://notify.moe/api" target="_blank">notify.moe API</a></li>
+                                            <li><a href="https://waifu.pics/" target="_blank">waifu.pics</a></li>
+                                            <li><a href="https://soruly.github.io/trace.moe-api/#/" target="_blank">trace.moe API</a></li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                        
+                                <p>有任何建議可至巴哈小屋回饋: <a href="https://home.gamer.com.tw/creationDetail.php?sn=6043608" target="_blank">巴哈小屋</a></p>
+                            </section>
+                        </div>
+                    </v-card>
+                    <v-card v-show="tab == 'tab-1'" class="bkColor">
+                        <h2 style="text-align: center;">
+                            隨機作品
+                            <v-btn @click="getRandomArray" color="primary" fab x-small dark>
+                                <v-icon>mdi-dice-multiple</v-icon>
+                            </v-btn>
+                        </h2>
+                        <v-sheet class="mx-auto" elevation="0" max-width="1800" v-if="randomTen.length == 0">
+                            <v-slide-group class="pa-0" show-arrows>
+                                <v-slide-item v-for="n in 10" :key="n" class="bkColor">
+                                    <v-sheet class="pa-3">
+                                        <v-skeleton-loader class="mx-auto" height="280" width="180" type="card">
+                                        </v-skeleton-loader>
+                                    </v-sheet>
+                                </v-slide-item>
+                            </v-slide-group>
+                        </v-sheet>
+
+                        <v-sheet class="mx-auto" elevation="0" max-width="1800">
+                            <v-slide-group class="pa-4" show-arrows>
+                                <v-slide-item v-for="item in randomTen" :key="item.mal.id" v-slot="{ active, toggle }" class="bkColor">
+                                    <v-card class="ma-4" height="260" width="170" @click="search = randomListTitle(item),preSearch = randomListTitle(item),year = ''">
+                                        <v-row class="fill-height" align="center" justify="center">
+                                            <v-col class="shrink">
+
+                                                <v-img height="200" width="170" alt="cover" :src="setCover(item,false)">
+                                                </v-img>
+                                            </v-col>
+                                            <span class="randomBar" v-text="randomListTitle(item)"></span>
+                                        </v-row>
+                                    </v-card>
+                                </v-slide-item>
+                            </v-slide-group>
+                        </v-sheet>
+                        <h1 style="text-align: center;">動畫排行總表</h1>
+                        <span>含{{voiceCount}}位聲優及擔任角色</span>
+                        <v-dialog v-model="dialogCal" width="1680" heigth="1920">
+                            <template v-slot:activator="{ on, attrs }">
+                            <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on" v-if="windowWidth >= 600">
+                                <v-icon>mdi-cake</v-icon>
+                                聲優的生日日曆表
+                            </v-btn>
+                        </template>
+                            <v-card min-height="1400px">角色列表不全，尚未修正
+                                <v-card-title class="text-h5  lighten-2">
+                                    <v-btn icon class="ma-2" @click="$refs.calendar.prev()">
+                                        <v-icon>mdi-chevron-left</v-icon>
+                                    </v-btn>
+                                    <v-btn icon class="ma-2" @click="$refs.calendar.next()">
+                                        <v-icon>mdi-chevron-right</v-icon>
+                                    </v-btn>
+                                    <v-btn outlined class="mr-4" color="grey darken-2" @click="focus = ''">
+                                        Today
+                                    </v-btn>
+                                    <v-spacer>
+                                        <v-toolbar-title v-if="$refs.calendar" style="text-align: center;padding:0">
+                                            {{ $refs.calendar.title }}
+                                        </v-toolbar-title>
+                                    </v-spacer>
+                                    <v-btn icon class="ma-2" @click="$refs.calendar.prev()">
+                                        <v-icon>mdi-chevron-left</v-icon>
+                                    </v-btn>
+                                    <v-btn icon class="ma-2" @click="$refs.calendar.next()">
+                                        <v-icon>mdi-chevron-right</v-icon>
+                                    </v-btn>
+                                </v-card-title>
+                                <v-card-text>
+                                    <v-sheet height="1750px">
+                                        <v-calendar v-model="focus" color="deep-purple lighten-3" event-text-color="indigo darken-4" :event-more="false" ref="calendar" :events="eventVoice" :ripple="false" locale='zhHant' @change="getEvents" @click:event="voiceClick">
+                                        </v-calendar>
+                                        <v-menu 
+                                        v-if="selectedEvent" 
+                                        v-model="voiceOpen" 
+                                        :close-on-content-click="false" 
+                                        :activator="selectedElement" 
+                                        offset-x
+										@click="$refs.scrollableCard.scrollTop = 0"
+                                      >
+                                        <v-card 
+                                          color="grey lighten-4" 
+                                          min-width="350px" 
+                                          flat 
+                                          style="max-height: 80vh; overflow-y: auto;"
+										  ref="scrollableCard"
+                                        >
+                                          <v-toolbar :color="selectedEvent.color" dark>
+                                            <v-toolbar-title style="color:black">{{ selectedEvent.name }}</v-toolbar-title>
+                                            <v-spacer></v-spacer>
+                                          </v-toolbar>
+                                      
+                                          <v-card-text>
+                                            <v-avatar height="150" width="120" rounded>
+                                              <img 
+                                                alt="voiceImg" 
+                                                :src="'https://cdn.myanimelist.net/images/voiceactors/' + selectedEvent.voiceImg"
+                                              >
+                                            </v-avatar> 
+                                      
+                                            <h4>擔任配音至少 {{ selectedEvent.isMain + selectedEvent.isSup }} 次</h4>
+                                            <h3>其中擔任主要角色至少為 {{ selectedEvent.isMain }} 次，作品如下表：</h3>
+                                            <h5>下表不一定有顯示全部主要角色，僅限於包含在本網頁列表</h5>
+                                      
+                                            <!-- 使用條列式呈現 -->
+                                            <v-list dense>
+                                              <v-divider></v-divider>
+                                              <v-list-item 
+                                                v-for="details in selectedEvent.details" 
+                                                :key="details.chId"
+                                              >
+                                                <!-- 頭像 -->
+                                                <v-list-item-avatar rounded>
+                                                  <v-img alt="角色頭像"
+                                                    :src="'https://cdn.myanimelist.net/images/characters/' + details.img"
+                                                    contain
+                                                    height="60"
+                                                    width="60"
+                                                  ></v-img>
+                                                </v-list-item-avatar>
+                                      
+                                                <!-- 角色名稱 -->
+                                                <v-list-item-content>
+                                                  <v-list-item-title class="text-truncate">{{ details.title }}</v-list-item-title>
+                                                  <v-list-item-subtitle v-if="details.charJpNamepName" class="text-truncate">角色名字: {{ details.charJpName }}</v-list-item-subtitle>
+                                                  <v-list-item-subtitle v-if="details.charEngName" class="text-truncate">角色英文名: {{ details.charEngName }}</v-list-item-subtitle>
+                                                </v-list-item-content>
+                                              </v-list-item>
+                                              <v-divider></v-divider>
+                                            </v-list>
+                                      
+                                          </v-card-text>
+                                        </v-card>
+                                      </v-menu>
+                                      
+                                    </v-sheet>
+                                </v-card-text>
+                                <v-divider></v-divider>
+                                <v-card-actions>
+                                    <v-btn icon class="ma-2" @click="$refs.calendar.prev()">
+                                        <v-icon>mdi-chevron-left</v-icon>
+                                    </v-btn>
+                                    <v-btn icon class="ma-2" @click="$refs.calendar.next()">
+                                        <v-icon>mdi-chevron-right</v-icon>
+                                    </v-btn>
+                                    <v-spacer>
+                                        <v-toolbar-title v-if="$refs.calendar" style="text-align: center;padding:0">
+                                            {{ $refs.calendar.title }}
+                                        </v-toolbar-title>
+                                    </v-spacer>
+                                    <v-btn icon class="ma-2" @click="$refs.calendar.prev()">
+                                        <v-icon>mdi-chevron-left</v-icon>
+                                    </v-btn>
+                                    <v-btn icon class="ma-2" @click="$refs.calendar.next()">
+                                        <v-icon>mdi-chevron-right</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
+                            </v-card>
+                        </v-dialog>
+                        <v-expansion-panels multiple v-model="panel">
+                            <v-expansion-panel>
+                                <v-expansion-panel-header color="deep-purple lighten-4" style="text-align: center;padding:0">
+                                    <span>
+                                    <v-icon>
+                                        mdi-image-search alt
+                                    </v-icon>
+                                    以動畫截圖找動畫(以圖搜圖)
+                                </span></v-expansion-panel-header>
+                                <v-expansion-panel-content color="yellow lighten-4"><br />
+                                    <h4>僅適合找動畫中出現的場景，例如搜尋這種沒辨識度的畫面：https://yuriever.com/assets/test.jpg</h4>
+                                    <v-row>
+                                        <v-col cols="2">
+                                            <v-file-input accept="image/*" truncate-length="15" label="檔案限制25MB" show-size v-model="srhImage" @change="searchImage(false)" :rules="srhImgSize"></v-file-input>
+                                            <v-btn @click="srhImage = '', srhImageUrl = '', srhImageRes = [], srhImgPre=''">
+                                                <v-icon>mdi-restart alt</v-icon>清除</v-btn>
+                                        </v-col>
+                                        <v-col cols="6">
+                                            <v-text-field label="圖片網址" v-model="srhImageUrl"></v-text-field>
+                                            <v-btn @click="searchImage(true)">
+                                                <v-icon>mdi-search-web alt</v-icon>搜尋</v-btn>
+                                        </v-col>
+                                        <v-col>
+                                        </v-col>
+                                    </v-row>
+                                    <span v-if="srhImgPre">
+                                        300秒後會自動清除查詢資料<br/>
+                                        搜尋圖片：
+                                    <img alt="選擇的圖片" :src="srhImgPre"></span>
+                                    <v-overlay :value="overlay">
+                                        <v-progress-circular indeterminate color="primary"></v-progress-circular>
+                                    </v-overlay>
+                                    <v-container v-if="srhImageRes">
+                                        <v-row>
+                                            <v-col v-for="res in srhImageRes" :key="res" cols="4">
+                                                <v-card>
+                                                    <video width="100%" :src=res.video autoplay loop playsinline></video>
+                                                    <v-card-text>
+                                                        <h3 v-if="res.ch_name">{{res.ch_name}}</h3>
+                                                        <h3>{{res.jp_name}}</h3>
+                                                        <h3>{{res.en_name}}</h3> <span v-if="res.hentai" style="color:red"><b>裏番</b></span> 相似度：~
+                                                        <span :style="setSimilarityColor(res.similarity)">{{res.similarity}}</span>
+                                                        <br/>
+                                                        <span v-if="res.episode">第{{res.episode}}話 </span> {{res.from}}~{{res.to}}處
+                                                        <br>
+                                                        <span v-for="(item, key, index) in onlineList(res.online)" :key="index">
+                                                                <a :href="item" :target="key" :title="key">{{ key }}</a> <br/>
+                                                        </span>
+                                                    </v-card-text>
+                                                </v-card>
+                                                <br/>
+                                            </v-col>
+                                        </v-row>
+                                    </v-container>
+                                </v-expansion-panel-content>
+                            </v-expansion-panel>
+                            <v-expansion-panel v-if="windowWidth >= 600">
+                                <v-expansion-panel-header color="light-blue lighten-5" style="text-align: center;padding:0">
+                                    <span>
+                                    <v-icon>
+                                        mdi-label-multiple
+                                    </v-icon>
+                                    動畫公司篩選箱
+                                </span></v-expansion-panel-header>
+                                <v-expansion-panel-content color="yellow lighten-4"><br />
+                                    <div v-if="this.loadingProgress < 100">讀取中...</div>
+                                    <v-chip-group v-model="cmpSel" column multiple>
+                                        <v-chip v-for="(cmp, index) in cmpList" :key="index" filter :value="cmp" label>
+                                            <span>{{cmp}}</span>
+                                        </v-chip>
+                                    </v-chip-group>
+                                    <v-btn @click="cmpSel = []">
+                                        <v-icon>mdi-restart alt</v-icon>重設選項</v-btn>
+                                    <span>僅顯示製作數量最多的前50間</span>
+                                </v-expansion-panel-content>
+                            </v-expansion-panel>
+                            <v-expansion-panel v-if="windowWidth >= 600">
+                                <v-expansion-panel-header color="light-blue lighten-5" style="text-align: center;padding:0">
+                                    <span>
+                                    <v-icon>
+                                        mdi-label-multiple
+                                    </v-icon>
+                                    線上看篩選箱
+                                </span></v-expansion-panel-header>
+                                <v-expansion-panel-content color="yellow lighten-4"><br />
+                                    <div v-if="this.loadingProgress < 100">讀取中...</div>
+                                    <v-chip-group v-model="onlineWatchSel" column multiple>
+                                        <v-chip v-for="(online, index) in onlineWatchs" :key="index" filter :value="online" dark>
+                                            <span>{{online}}</span>
+                                        </v-chip>
+                                    </v-chip-group>
+                                    <v-btn @click="onlineWatchSel = []">
+                                        <v-icon>mdi-restart alt</v-icon>重設選項</v-btn>
+                                </v-expansion-panel-content>
+                            </v-expansion-panel>
+
+                            <v-expansion-panel>
+                                <v-expansion-panel-header color="light-blue lighten-5" style="text-align: center;padding:0">
+                                    <span>
+                                    <v-icon>
+                                        mdi-label-multiple
+                                    </v-icon>
+                                    類型篩選箱
+                                </span></v-expansion-panel-header>
+                                <v-expansion-panel-content color="yellow lighten-4"><br />
+                                    <div v-if="this.loadingProgress < 100">讀取中...</div>
+                                    <v-chip-group v-model="genreSel" column multiple>
+                                        <v-chip v-for="(genre, index) in genreList" :key="index" filter :value="genre" :disabled="!badges[genre]" dark    
+                                        :class="{
+                                            'orange lighten-1': setGenColor(genre) === 'A', 
+                                            'blue lighten-2': setGenColor(genre) === 'B', 
+                                            'brown lighten-1': setGenColor(genre) === 'C', 
+                                            'red darken-2': setGenColor(genre) === 'D', 
+                                        }">
+                                            <span>{{genre | genreToCht}}</span>
+                                            <span>&nbsp;({{badges[genre] ? badges[genre] : '&nbsp;&nbsp; 0 &nbsp;&nbsp;'}})</span>
+                                        </v-chip>
+                                    </v-chip-group>
+                                    <v-btn @click="genreSel = []">
+                                        <v-icon>mdi-restart alt</v-icon>重設類型</v-btn>
+                                        
+                                </v-expansion-panel-content>
+                            </v-expansion-panel>
+                        </v-expansion-panels>
+                        <span v-if="windowWidth < 600">(以網頁版為主，手機版較難維護，移除大部分功能)</span>
+                        <!-- <v-select v-if="windowWidth < 600" :items="selectTypes" v-model="selType" label="作品類型" dense item-text="cht" item-value="value"></v-select>
+                        <v-select v-if="windowWidth < 600" :items="selectSources" v-model="selSource" label="改編類型" dense item-text="cht" item-value="value"></v-select>
+                        <v-select v-if="windowWidth < 600" :items="selectYears" v-model="selYear" label="年份範圍" dense>
+                        </v-select>
+                        <v-text-field v-if="windowWidth < 600" v-model="year" type="number" label="西元年" clear-icon="mdi-close-circle" clearable dense> -->
+                        </v-text-field>
+                        <!-- <v-text-field v-if="windowWidth < 600" id="srh2" v-model="preSearch" append-icon="mdi-magnify" hint="至少輸入兩個字" label="動畫名稱搜尋(中/英/日)" clearable clear-icon="mdi-close-circle" dense>
+                         </v-text-field>
+                        <v-checkbox v-if="windowWidth < 600" v-model="toRandom" label="排名亂數排序" dense color="red">
+                        </v-checkbox> -->
+                        <v-card-title v-if="windowWidth > 600">
+                            <v-row>
+                                <v-btn @click="sortBy = 'rank', onlineWatchSel = [],cmpSel = [],genreSel = [],selType = 'ALL',selSource='ALL', selYear = '等於',year = '' , rank1 = '', rank2 = '', search = '',diff = '',bangumiDisable=false,preSearch=''">
+                                    <v-icon>mdi-restart alt</v-icon>重設所有篩選條件</v-btn>
+                                <v-col cols="1">
+                                    <v-select :items="selectTypes" v-model="selType" label="作品類型" dense item-text="cht" item-value="value"></v-select>
+                                </v-col>
+                                <v-col cols="1">
+                                    <v-select :items="selectSources" v-model="selSource" label="改編類型" dense item-text="cht" item-value="value"></v-select>
+                                </v-col>
+                                <v-col cols="1">
+                                    <v-select :items="selectYears" v-model="selYear" label="年份範圍" dense></v-select>
+                                </v-col>
+                                <v-col cols="1">
+                                    <v-text-field v-model="year" type="number" label="西元年" clear-icon="mdi-close-circle"  dense>
+                                    </v-text-field>
+                                </v-col>
+                                <v-col cols="1" v-if="selYear == '介於'">
+                                    <v-text-field v-model="year2" type="number" label="迄" clear-icon="mdi-close-circle"  dense>
+                                    </v-text-field>
+                                </v-col>
+                                <v-col>
+                                    <v-text-field :error-messages="inputErr" v-model="preSearch" id="srh1" append-icon="mdi-magnify" clear-icon="mdi-close-circle" hint="中/英/日/羅馬拼音" label="作品名稱" 
+                                    @click:clear="clearSearch" dense clearable>
+                                    </v-text-field>
+                                </v-col>
+                                <v-col>
+                                    <v-btn @click="queryBtn = true">
+                                        <v-icon>mdi-text-search</v-icon>查詢名稱</v-btn>
+                                </v-col>
+                                <v-col cols="1">
+                                </v-col>
+                                <v-col cols="1">
+                                    <v-text-field v-model="diff" type="number" label="與巴哈相差分數" clear-icon="mdi-close-circle" clearable dense>
+                                    </v-text-field>
+                                </v-col>
+                                <v-col cols="1">
+                                    <v-text-field v-model="rank1" type="number" label="排名區間" clear-icon="mdi-close-circle" clearable dense>
+                                    </v-text-field>
+                                </v-col>
+                                <v-col cols="1">
+                                    <v-text-field v-model="rank2" type="number" label="迄" clear-icon="mdi-close-circle" clearable dense>
+                                    </v-text-field>
+                                </v-col>
+                            </v-row>
+                            <v-row>
+                                <v-col>
+                                    <label>根據網站排序(分數)：</label>
+                                    <v-select :items="sorts" 
+                                    item-text="name"
+                                    item-value="value" v-model="sortBy" label="排序" dense solo eager></v-select>
+                                    <v-btn-toggle v-model="sortDesc" mandatory>
+                                        <v-btn depressed :value="true" :disabled="toRandom">
+                                            <v-icon>mdi-arrow-up</v-icon>
+                                        </v-btn>
+                                        <v-btn depressed :value="false" :disabled="toRandom">
+                                            <v-icon>mdi-arrow-down</v-icon>
+                                        </v-btn>
+                                    </v-btn-toggle>
+                                </v-col>
+                                <v-col cols="1">
+                                    <v-checkbox class="font-weight-black" color="red" v-model="toRandom" label="隨機排序" dense color="red">
+                                    </v-checkbox>
+                                </v-col>
+
+                                <v-col cols="2">
+                                    <v-checkbox v-model="disabledZero" label="排除無計分動畫" dense></v-checkbox>
+                                </v-col>
+                                <v-col cols="2">
+                                    <v-checkbox v-model="disabledBgImage" label="禁用背景橫幅(省流量)" dense></v-checkbox>
+                                </v-col>
+
+                                <v-col> </v-col>
+                                <v-col cols="1">
+                                    <v-checkbox class="font-weight-black" color="red" v-model="disabledNSFW" label="排除裏番" dense></v-checkbox>
+                                </v-col>
+                                <v-col cols="2">
+                                    <v-select :items="itemsPerPages" v-model="itemsPerPage" label="每頁列數" dense>
+                                    </v-select>
+                                </v-col>
+                            </v-row>
+                        </v-card-title>
+
+                        <v-row>
+                            <v-col>
+                                <v-pagination v-model="page" :length="pageCount" :total-visible="totalVis" @input="next">
+                                </v-pagination>
+                            </v-col>
+                        </v-row>
+                        <br />
+                        <v-row>
+                            <span style="float:right;">&emsp;總筆數:{{rawData.length}}，更新時間:{{updateDate}}</span>
+                        </v-row>
+                        <span v-if="windowWidth > 600"> <br/> </span>
+
+                        <br/>
+                        <div v-if="this.loadingProgress < 100">
+                            <v-progress-linear 
+                              :value="loadingProgress" 
+                              color="blue" 
+                              height="15" 
+                              striped 
+                              :indeterminate="loadingProgress < 5"
+                            >
+                              <template v-slot:default>
+                                <span style="font-size: 16px;">進度: {{ loadingProgress }}%</span>
+                              </template>
+                            </v-progress-linear>
+                            <div style="font-size: 16px;">已讀取: {{ currentLoaded }} / {{ fileSize }} MB</div>
+                            <div v-if="loadingProgress > 10" style="font-size: 16px;">
+                              讀取中，如果沒有異常，總共會有 14000筆以上
+                            </div>
+                          </div>
+                        <v-data-table show-select class="bkColor" :sort-by="sortBy" :sort-desc="sortDesc" v-if="windowWidth >= 600" hide-default-header loader-height="10" ref="tb"  no-results-text="查無任何資料，可能是沒有收錄、名稱錯誤，又或者是篩選條件沒有重設、勾選排除無計分動畫，請嘗試其他條件"
+                            no-data-text="完全無資料，這可能是我修改過格式了，請同時按下( ctrl F5 )來嘗試清除快取。" :custom-sort="customSort" item-key="rank" fixed-header :items="rawData" :headers="headers" :items-per-page.sync=itemsPerPage class="elevation-1 " :page.sync="page" @page-count="pageCount = $event"
+                            hide-default-footer>
+
+                            <template v-slot:item="{item}">
+                            <tr style="color:black" v-intersect="setBackgroundLazy" class="lazy" v-if="destroy">
+                                <td class="center pa-0" style="padding:0" width="200">
+                                    <v-img :contain=true :lazy-src=setCover(item,true) height="250" width="200"
+                                        alt="coverSM" title="點圖放大" :src=setCover(item,false) @click="toggleFullscreen(item)">
+                                    </v-img>
+                                    <div v-if="selectedImage" class="overlay">
+                                        <v-img class="mt-12" :src="selectedImage" alt="animeCover" max-height="95vh"
+                                        alt="coverLG"  contain dark @click.stop="selectedImage = false">
+                                        </v-img>
+                                    </div>
+                                </td>
+                                <td style="font-size:15px;font-weight:bold;padding:0">
+                                    <span v-if="null != item.gamer">{{ item.gamer.title }}
+                                    </span> <br />
+                                    <span v-if="null != item.bgm">{{ item.bgm.cn_name }}</span> <br />
+                                    <span v-if="null != item.mal">{{ item.mal.jp_name }}</span> <br />
+                                    <span v-if="null != item.mal">{{ item.mal.en_name }}</span> <br />
+
+                                    <span v-if="null != item.official">
+                                        <a :href="'https://' + item.official" target="_blank">動畫官網</a>&nbsp;
+                                    <v-divider></v-divider>
+                                    </span>
+                                    <span v-if="null != item.twitter">
+                                        <a :href="'https://' + item.twitter" target="_blank">Twitter</a>&nbsp;
+                                    </span>
+									<br />
+                                    <span v-if="null != item.tvdb">
+                                        <a :href="'https://www.thetvdb.com/?tab=series&amp;id=' + item.tvdb" title="TVDB" target="_blank">TVDB</a>&nbsp;
+                                    </span>
+                                    <span v-if="null != item.imdb">
+                                        <a :href="'https://www.imdb.com/title/' + item.imdb" title="IMDB" target="_blank">IMDB</a>&nbsp;
+                                    </span>
+                                    <span  v-if="null != item.tmdb">
+                                        <a :href="'https://www.themoviedb.org/movie/' + item.tmdb" title="TMDB" target="_blank" v-if="item.mal.type == 'Movie'">TMDB</a>
+                                        <a :href="'https://www.themoviedb.org/tv/' + item.tmdb" title="TMDB" target="_blank" v-else>TMDB</a>
+                                    </span>
+                                     <span v-if="null != item.voiranime">
+                                        <a :href="'https://v5.voiranime.com/anime/' + item.voiranime" title="voiranime" target="_blank">VOIRANIME</a>&nbsp;
+                                    </span>
+                                    <span v-if="null != item.kinopoisk">
+                                        <a :href="'https://www.kinopoisk.ru/' + item.kinopoisk" title="kinopoisk" target="_blank">KINOPOISK</a>&nbsp;
+                                    </span>
+                                    <span v-if="null != item.csfd">
+                                        <a :href="'https://www.csfd.cz/film/' + item.csfd" title="csfd" target="_blank">CSFD</a>&nbsp;
+                                    </span>
+                                    <span v-if="null != item.trakt">
+                                        <a :href="'https://trakt.tv/shows/' + item.trakt.id" title="trakt" target="_blank">Trakt</a>&nbsp;
+                                    </span>
+                                    <span ></span>
+                                    <br /> 
+                                    <span style="font-size:14px;color:#6c757d">{{ item.mal.type }}&nbsp;<span
+                                            v-if="null != item.mal.premiered">({{ item.mal.premiered }}<span
+                                                v-if="null != item.mal.season">{{item.mal.season|seasonCht}}</span>)</span>
+                                        <span v-if="item.mal.source">改編：{{ item.mal.source | sourceToCht }}</span>
+                                        <span
+                                            v-if="item.mal.episodes && item.mal.type != 'Movie'">，{{ item.mal.episodes }}話</span>
+                                        <span v-if="item.mal.duration">(~{{ item.mal.duration }}分鐘)</span>
+                                        <br />
+                                        <template>
+                                            <v-menu offset-y open-on-hover rounded v-if="item.mal.studios.length > 0">
+                                                <template v-slot:activator="{ on, attrs }">
+                                                    <v-btn small v-bind="attrs" v-on="on" color="transparent" light>
+                                                        <span style="font-size:14px;">動畫公司</span>
+                                                    </v-btn>
+                                                </template>
+                            <v-list>
+                                <v-list-item v-for="(stu, index) in item.mal.studios" :key="index">
+                                    <v-list-item-title>{{ stu }}</v-list-item-title>
+                                </v-list-item>
+                            </v-list>
+                            </v-menu>
+                            <v-menu offset-y open-on-hover rounded v-if="item.mal.genres.length > 0">
+                                <template v-slot:activator="{ on, attrs }">
+                                                    <v-btn small v-bind="attrs" v-on="on" color="transparent" light>
+                                                        <span style="font-size:14px;">作品類型</span>
+                                                    </v-btn>
+                                                </template>
+                                <v-list>
+                                    <v-list-item v-for="(genre, index) in item.mal.genres" :key="index">
+                                        <v-list-item-title>{{ genre | genreToCht}}
+                                        </v-list-item-title>
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
+                            <v-menu offset-y open-on-hover rounded v-if="null != item.mal.voices && item.mal.voices.length > 0">
+                                <template v-slot:activator="{ on, attrs }">
+                                                    <v-btn small v-bind="attrs" v-on="on" color="transparent" light>
+                                                        <span style="font-size:14px;">主要聲優</span>
+                                                    </v-btn>
+                                                </template>
+                                <v-list>
+                                    <v-list-item v-for="(item, index) in item.mal.voices" :key="index">
+                                        <v-list-item-title>{{ item.name }}</v-list-item-title>
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
+                            </template>
+                            </span><br />
+                            <span :style="" style="font-size:23px;">綜合排名： </span>
+                            <v-chip dark>
+                                <span :style="setRankColor(item.rank)" style="font-size:30px;font-weight:bold;">{{item.rank}}
+                                        </span>
+                            </v-chip>
+                            <div>
+                                <v-menu offset-y open-on-hover v-if="Object.keys(item.online).length > 0">
+                                    <template v-slot:activator="{ on, attrs }">
+                                                <v-btn light outlined color="primary" dark v-bind="attrs" v-on="on">
+                                                    <v-icon>mdi-video-check-outline</v-icon>線上看<v-icon>mdi-menu-down
+                                                    </v-icon>
+                                                </v-btn>
+                                            </template>
+                                    <v-list>
+                                        <v-list-item v-for="(item, key, index) in onlineList(item.online)" :key="index">
+                                            <v-list-item-title><a :href="item" :target="key" :title="key">{{ key }}</a>
+                                            </v-list-item-title>
+                                        </v-list-item>
+                                    </v-list>
+                                </v-menu>
+                                <span>
+                                </span>
+                                <span style="float: right;" v-if="item.mal.trailer">
+                                            <v-btn color="transparent" light
+                                                @click.stop="$set(dialogYt, item.mal.id, true)">
+                                                <v-icon>mdi-youtube</v-icon>PV
+                                            </v-btn>
+                                            <v-dialog v-model="dialogYt[item.mal.id]" scrollable max-width="960"
+                                                :key="item.mal.id" v-if="dialogYt[item.mal.id]">
+                                                <iframe width="960" height="540" :src="getYoutube(item.mal.trailer)"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen></iframe>
+                                            </v-dialog>
+                                </span>
+								<span style="float: right;" v-if="item.bgm && item.bgm.summary">
+									<v-btn color="transparent" light @click.stop="$set(dialogSummary, item.mal.id, true)">
+										<v-icon>mdi-information-outline</v-icon>簡介
+									</v-btn>
+									<v-dialog v-model="dialogSummary[item.mal.id]" scrollable max-width="960" :key="item.mal.id" v-if="dialogSummary[item.mal.id]">
+										<v-card>
+											<v-card-title style="font-size: 24px;">動畫簡介</v-card-title>
+											<v-card-text style="font-size: 18px; white-space: pre-wrap; text-align: left;" v-html="item.bgm.summary.trim()"></v-card-text>
+										</v-card>
+									</v-dialog>
+								</span>
+                            </div>
+                            </td>
+
+                            <td class="center pa-0">
+                                <span style="font-size:14px;">Bayesian</span><br />加權評分<br />
+                                <span style="font-size:35px;font-weight:bold">{{item.score != 0 ? Number(item.score).toFixed(2) :'不計分'}}</span>
+                            </td>
+                            <td
+                            v-for="(site, index) in ratingSites"
+                            :key="index"
+                            class="center pa-0"
+                            >
+                            <v-avatar size="32" rounded>
+                                <img :alt="site.name" :src="`image/${site.image}.webp`" />
+                            </v-avatar>
+                            <br />
+                            <rating
+                                v-if="item[site.key]"
+                                :item="item[site.key]"
+                                :website="site.key"
+                                :b-score="item[site.key].b_score"
+                            ></rating>
+                            <span v-else>
+                                <v-chip>N/A</v-chip>
+                            </span>
+                            </td>
+                            <!-- <td></td> -->
+                            <td v-show=false>
+                                <span v-text="getBackground(item)"></span>
+                            </td>
+                            </tr>
+                            </template>
+                        </v-data-table>
+                        <v-data-table class="bkColor" v-if="windowWidth < 600" loader-height="10" ref="tb" no-results-text="查無任何資料，請看電腦版..." item-key="rank" disable-sort
+                            fixed-header :items="rawData" :headers="headers" :items-per-page.sync=itemsPerPage class="elevation-1" query="true"  :loading="isLoading" :page.sync="page" @page-count="pageCount = $event" hide-default-footer>
+                           		<template v-slot:loading>
+							  <div>
+								<v-progress-linear
+								  :value="loadingProgress" 
+								  color="blue" 
+								  height="20" 
+								  striped 
+								  indeterminate
+								>
+								  <template v-slot:default>
+									<span style="font-size: 16px;">進度: {{ loadingProgress }}%</span>
+								  </template>
+								</v-progress-linear>
+								<div style="font-size: 16px;">{{ currentLoaded }}/{{ fileSize }} MB</div>
+								<div v-if="loadingProgress > 90" style="font-size: 16px;">解壓縮、運算中，可能會出現停止回應，但應該是不會超過10秒啦...超過太久就重新整理</div>
+							  </div>
+							</template>
+						   <template v-slot:item.cover="{ item }">
+                            <v-img :contain=true :lazy-src=setCover(item,true) alt="animeCoverSM" height="200" width="150"
+                                :src=setCover(item,false) @click="toggleFullscreen(item)">
+                            </v-img>
+                            <div v-if="selectedImage" class="overlay">
+                                <v-img class="mt-12" :src="selectedImage" alt="animeCover" max-height="95vh" contain
+                                    dark @click.stop="selectedImage = false">
+                                </v-img>
+                            </div>
+                        </template>
+                            <template v-slot:item.name="{ item }">
+                            <span v-if="null != item.gamer">{{ item.gamer.title }}
+                            </span> <br />
+                            <span v-if="null != item.bgm">{{ item.bgm.cn_name }}</span> <br />
+                            <span v-if="null != item.mal">{{ item.mal.jp_name }}</span> <br />
+                            <span v-if="null != item.mal">{{ item.mal.en_name }}</span> <br />
+                            <v-divider></v-divider>
+                            <span
+                                style="font-size:14px;color:#6c757d">{{ item.mal.type }}&nbsp;({{ item.mal.premiered }})</span><br />
+                            <span :style="" style="font-size:20px;">綜合排名： </span>
+                            <span style="font-size:30px;font-weight:bold;">{{item.rank}}
+                            </span>
+                        </template> 平均
+                            <template v-slot:item.score="{ item }">
+                            <span style="font-size:30px;">{{item.score| returnZero}}</span>
+                        </template>
+                            <!-- 巴哈-->
+                            <template v-slot:item.gamer="{ item }">
+                            <span v-if="item.gamer">{{item.gamer.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--mal -->
+                            <template v-slot:item.mal="{ item }">
+                            <span v-if="item.mal">{{item.mal.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--bgm -->
+                            <template v-slot:item.bgm="{ item }">
+                            <span v-if="item.bgm">{{item.bgm.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--ANIKORE -->
+                            <template v-slot:item.anikore="{ item }">
+                            <span v-if="item.anikore">{{item.anikore.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--ANILIST -->
+                            <template v-slot:item.anilist="{ item }">
+                            <span v-if="item.aniList">{{item.aniList.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--APC -->
+                            <template v-slot:item.animeplanetcom="{ item }">
+                            <span v-if="item.animePlanetCom">{{item.animePlanetCom.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--ann -->
+                            <template v-slot:item.ann="{ item }">
+                            <span v-if="item.ann">{{item.ann.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--ANISEARCH -->
+                            <template v-slot:item.anisearch="{ item }">
+                            <span v-if="item.anisearch">{{item.anisearch.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--KITSU -->
+                            <template v-slot:item.kitsu="{ item }">
+                            <span v-if="item.kitsu">{{item.kitsu.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--NOTIFYMOE -->
+                            <template v-slot:item.notifymoe="{ item }">
+                            <span v-if="item.notifyMoe">{{item.notifyMoe.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--livechart -->
+                            <template v-slot:item.livechart="{ item }">
+                            <span v-if="item.livechart">{{item.livechart.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--anidb -->
+                            <template v-slot:item.anidb="{ item }">
+                            <span v-if="item.anidb">{{item.anidb.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                        <!--shikimori -->
+                        <template v-slot:item.shikimori="{ item }">
+                            <span v-if="item.shikimori">{{item.shikimori.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--annict -->
+                            <template v-slot:item.annict="{ item }">
+                            <span v-if="item.annict">{{item.annict.b_score| returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                            <!--sakuhindb -->
+                            <template v-slot:item.sakuhindb="{ item }">
+                            <span v-if="item.sakuhindb">{{item.sakuhindb.b_score | returnZero}}</span>
+                            <span v-else>N/A</span>
+                        </template>
+                        </v-data-table>
+                        <br />
+                        <v-pagination v-model="page" :length="pageCount" :total-visible="totalVis" @input="next">
+                        </v-pagination>
+                </v-container>
+            </v-main>
+            <div class="sidebar_wo">
+                <div id="leimu" @click="toTop">
+                    <img :src="leimuUrl" alt="雷姆" @mouseover="leimuUrl = leimu('B')" @mouseout="leimuUrl = leimu('A')" title="回到頂端">
+                </div>
+                <div class="sidebar_wo" id="lamu" @click="toFooter">
+                    <img :src="lamuUrl" alt="拉姆" @mouseover="lamuUrl = lamu('B')" @mouseout="lamuUrl = lamu('A')" title="回到底部">
+                </div>
+            </div>
+            <footer class="footer" style="display:block; margin:auto;text-align: center;">
+                <div class="footer-line">
+                    <span style="font-size: 10px;">(´・ω・`)<br />
+                       <!-- <img src="https://SiteStates.com/show/image/33330.jpg" border="0" /> -->
+                    </span>
+                </div>
+            </footer>
+        </v-app>
+    </div>
+</body>
+</html>

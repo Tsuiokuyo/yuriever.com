@@ -1,0 +1,6 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>foobar2000 - 標籤 - 於是我又重看一次</title><link>https://yuriever.com/tags/foobar2000/</link><description>foobar2000 - 標籤 - 於是我又重看一次</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>Tsuiokuyo@gmail.com (Tsuiokuyo)</managingEditor><webMaster>Tsuiokuyo@gmail.com (Tsuiokuyo)</webMaster><copyright>Tsuiokuyo</copyright><lastBuildDate>Thu, 13 Oct 2022 14:48:06 +0800</lastBuildDate><atom:link href="https://yuriever.com/tags/foobar2000/" rel="self" type="application/rss+xml"/><item><title>使用Foobar2000+request_http建個基於icecast2的可點歌網路電台</title><link>https://yuriever.com/posts/9e31d4b6/</link><pubDate>Thu, 13 Oct 2022 14:48:06 +0800</pubDate><author>Tsuiokuyo</author><guid>https://yuriever.com/posts/9e31d4b6/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/assets/foobar2000.jpg" referrerpolicy="no-referrer">
+            </div><p>成品大概是這樣吧</p>
+<p>估計若干時間後，會整理音樂庫，改成用airsonic、navidrome甚至是PLEX來架設<br>
+如果無法設定guest權限，那這個網址屆時就會停止了，<br>
+至於emby、jellyfin就算了，因為先前有混用多種無損格式的關係，覺得體感不好。</p>]]></description></item></channel></rss>
